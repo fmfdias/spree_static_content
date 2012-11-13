@@ -23,11 +23,7 @@
 				<%= page.title %>
 			</td>
 			<td>
-				<% if page.foreign_link.present? %>
-  				<%= link_to page.title, page.foreign_link, {:target => "_blank"} %>
-				<% else %>
-  				<%= link_to page.title, static_url(page) %>
-				<% end %>
+				<%= link_to page.link, page.link %>
 			</td>
 			<td>
 			  <%= icon('tick') if page.visible %>
